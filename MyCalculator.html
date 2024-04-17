@@ -1,0 +1,72 @@
+<html>
+    <title>Calculator by BSY</title>
+    <head>
+        <style>
+            #sai{
+                background-color: rgb(39, 227, 39);
+                color:rgb(11, 4, 239);
+                font-size: 30px;
+                padding: 15px 30px;
+                text-align: center;
+            }
+            .yash{
+                font-size: 30px;
+            }
+            #swapna{
+                color:aquamarine;
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
+       <script>
+        function ac()
+        {
+            document.getElementById("res").value="";
+        }
+       </script> 
+       <script>
+        function show(input)
+        {
+            document.getElementById("res").value+=input;
+        }
+        function cal()
+        {
+             var output=eval(document.getElementById("res").value);
+             document.getElementById("res").value=output;
+        }
+       </script>  
+    </head>
+    <body>
+        <table border="6" cellspacing="6" cellpadding="6" align="center">
+            <caption id="swapna" colspan="4" >CALCULATOR</caption>
+            <tr align="center">
+                <td colspan="3" bgcolor="yellow" ><input type="text" class="yash" id="res"</td>
+                <td><button id="sai" onclick="ac()">AC </button></td>
+            </tr>
+            <tr align="center">
+                <td><button id="sai" onclick="show('1')" >1</button></td>
+                <td><button id="sai" onclick="show('2')">2</button></td>
+                <td><button id="sai" onclick="show('3')">3</button></td>
+                <td><button id="sai" onclick="show('+')">+</button></td>
+            </tr>
+            <tr align="center">
+                <td><button id="sai" onclick="show('4')">4</button></td>
+                <td><button id="sai" onclick="show('5')">5</button></td>
+                <td><button id="sai" onclick="show('6')">6</button></td>
+                <td><button id="sai" onclick="show('-')">-</button></td>
+            </tr>
+            <tr align="center">
+                <td><button id="sai" onclick="show('7')">7</button></td>
+                <td><button id="sai" onclick="show('8')">8</button></td>
+                <td><button id="sai" onclick="show('9')">9</button></td>
+                <td><button id="sai" onclick="show('*')">*</button></td>
+            </tr>
+            <tr align="center">
+                <td><button id="sai" onclick="show('0')">0</button></td>
+                <td><button id="sai" onclick="show('%')">%</button></td>
+                <td><button id="sai" onclick="show('/')">/</button></td>
+                <td><button id="sai" onclick="cal()">=</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
